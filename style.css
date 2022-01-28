@@ -1,0 +1,363 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    background-color: #0a0e35;
+    color: #fff;
+}
+.header img{
+    mix-blend-mode: lighten;
+    opacity: 0.8;
+}
+ul{
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+  
+ul li{
+    flex: 1;
+}
+li a{
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    width: 100%;
+    text-decoration: none;
+    background-color: #262F82;
+    border: 1px solid #262F82;
+    border-radius: 3px;
+}
+    
+li a:hover{
+    color: #262F82;
+    background: #0C1882;
+    border: 1px solid #262F82;
+}
+h3{
+    text-align: center;
+    margin: 40px 0;
+}
+.abc{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+.abc p{
+    flex-basis: 45%;
+    margin: 0 auto;
+    text-align: justify;
+}
+.abcd{
+    margin: 0 auto;
+}
+form{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+input{
+    padding: 10px 0;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+.baner{
+    margin: 0 auto;
+    width: 100%;
+}
+.oferta{
+    margin: 0 auto;
+    width: 80%;
+    padding: 0 0 100px 0;
+}
+.bcd{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 90% 10%;
+    grid-template-areas: "polo cap"
+                         "button cap";
+    width: 100%;
+    overflow: hidden;
+}
+.czapa{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-area: cap;
+}
+.koszulka{
+    width: 100%;  
+    height: 100%; 
+    object-fit: cover;
+    grid-area: polo;
+    background-color: #826500;
+}
+.bcd button{
+    width: 100%;
+    height: 100%;
+    grid-area: button;
+}
+.galeria{
+
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 30.3% 36.3% 33.3%;
+    grid-template-areas: "jeden dwa cztery"
+                         "trzy trzy cztery"
+                         "trzy trzy piec";
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    overflow: hidden;
+    }
+.galeria img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+    
+    .div1 { 
+        grid-area: jeden; 
+    
+    }
+    .div2 { 
+        grid-area: dwa; 
+ 
+    }
+    .div3 { 
+        grid-area: cztery; 
+        
+    }
+    .div4 { 
+        grid-area: trzy;
+   
+    }
+    .div5 {
+         grid-area: piec;      
+        } 
+.galeria :hover{
+ transform:  scale(1.01);
+}
+ul a{
+    color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+    header{
+        position: relative;
+        width: 100%;
+        z-index: 3;
+    }
+    .header-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .title{
+        min-height: 200px;
+        height: 30%;
+        width: 90%;
+        margin: 18% auto;
+        display: grid;
+        grid-template-columns: 45% 10% 45%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "main main ."
+                             ". second second";
+        text-align: center;
+    }
+    .title h1{
+        grid-area: main;
+        align-self: end;
+    }
+    .title h2{
+        grid-area: second;
+    }
+     header ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+    }
+    header li a{
+        padding: 20px;
+        display: block;
+    }
+    header li a:hover, .menu-btn:hover{
+        color: rgb(255, 255, 255); 
+    }
+     header .menu{
+         clear: both;
+         max-height: 0px;
+    }
+    .logo{
+        display: block;
+        float: left;
+        padding: 10px 20px;
+        font-size: 2em;
+        color: beige;
+    }
+    header .menu-icon{
+    cursor: pointer;
+        float: right;
+        padding: 30px 20px;
+        position: relative;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    header .menu-icon .navicon::after,header .menu-icon .navicon::before{
+        background: rgb(255, 255, 255);
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        content: "";
+    }
+    header .menu-icon .navicon::after{
+        top: -5px;
+    }
+    header .menu-icon .navicon::before{
+        top: 5px;
+    }
+    header .menu-icon .navicon{
+        background: rgb(255, 255, 255);
+        display: block;
+        position: relative;
+        height: 2px;
+        width: 20px;
+    }
+    header .menu-btn{
+        display: none;
+    }
+    header .menu-btn:checked ~.menu{
+         max-height: 300px;
+    }
+    header .menu-btn:checked ~.menu-icon .navicon{
+        background: transparent;
+    }
+    header .menu-btn:checked ~.menu-icon .navicon::after{
+        transform: rotate(45deg) translateY(6.5px);
+    }
+    header .menu-btn:checked ~.menu-icon .navicon::before{
+        transform: rotate(-45deg) translateY(-8px);
+    }
+
+    footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 20px 0;
+        background-color: #202020;
+        color: #fff;
+    }
+    footer a{
+        text-decoration: none;
+        color: #fff;
+    }
+@media(min-width:600px){
+    
+    header .menu{   
+        clear: none;
+         max-height: none;
+    }
+    header .menu-icon{
+        display: none;
+    }
+    
+}
+    @media(max-width:600px){
+        .galeria {
+
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 33.3% 33.3% 33.3%;
+        grid-template-areas: "cztery dwa "
+                             "jeden piec"
+                             "trzy trzy";
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        overflow: hidden;
+        }
+        .galeria img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }        
+        .div1 { 
+            grid-area: jeden; 
+        
+        }
+        .div2 { 
+            grid-area: dwa; 
+     
+        }
+        .div3 { 
+            grid-area: cztery; 
+            
+        }
+        .div4 { 
+            grid-area: trzy;
+       
+        }
+        .div5 {
+             grid-area: piec; 
+          
+            } 
+.galeria :hover{
+        transform:  scale(1.02);
+               }
+        .bcd{
+                display: grid;
+                grid-template-columns: 30% 70%;
+                grid-template-rows: 90% 10%;
+                grid-template-areas: "cap polo"
+                                     "cap button";
+                width: 100%;
+                overflow: hidden;
+            }
+        .czapa{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                grid-area: cap;
+            }
+        .koszulka{
+                width: 100%;  
+                height: 100%; 
+                object-fit: cover;
+                grid-area: polo;
+                background-color: #826500;
+            }
+            ul{
+                display: block;
+                width: 40%;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                float: right;
+            }
+              
+            ul li{
+                display: block;
+            }
+            li a{
+                text-align: center;
+                font-size: 1.2em;
+                width: 100%;
+                text-decoration: none;
+                background-color: #262F82;
+                border: 1px solid #262F82;
+                border-radius: 3px;
+            }
+                
+            li a:hover{
+                color: #262F82;
+                background: #0C1882;
+                border: 1px solid #262F82;
+            }
+}
